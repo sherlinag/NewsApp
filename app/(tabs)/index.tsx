@@ -7,6 +7,7 @@ import BreakingNews from '@/components/BreakingNews'
 import axios from 'axios'
 import { NewsDataType } from '@/types'
 import Categories from '@/components/Categories'
+import WhatsAppIntegration from '@/components/WhatsAppIntegration'
 
 type Props = {}
 
@@ -23,7 +24,7 @@ const Page = (props: Props) => {
       const URL = 
       'https://saurav.tech/NewsAPI/top-headlines/category/technology/in.json'
       const response =await axios.get(URL);
-      console.log(response.data);
+      // console.log(response.data);
       
       if(response&& response.data && response.data.articles){
         setBreakingNews(response.data.articles);
@@ -44,6 +45,7 @@ const Page = (props: Props) => {
       <BreakingNews newsList={breakingNews}/>
     )}
     <Categories />
+    <WhatsAppIntegration/>
     </View>
   )
 }
