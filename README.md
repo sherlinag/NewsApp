@@ -1,4 +1,4 @@
-# Expo News App 👋
+# React Native News App 👋
 
 ## Get started
 
